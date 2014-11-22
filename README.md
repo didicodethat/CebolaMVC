@@ -14,13 +14,17 @@ Models do sistema
 
 ``` ./app/Views/ ```
 
-Views do sístema
+Views do sistema
+
+``` ./app/Views/Helpers/ ```
+
+Handlebars Helpers
 
 ``` ./config/ ```
 
 Configurações e rotas do sistema
 
-``` ./front-end/ ```
+``` ./front_end/ ```
 
 Códigos fontes de componentes de layout tais como folhas de estilo e scripts
 

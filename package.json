@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./run --use_strict",
-    "test": "vows ./test/tests"
+    "test": "node ./test/tests"
   },
   "dependencies": {
     "body-parser": "~1.8.1",

@@ -1,3 +1,5 @@
+// Dependências
+var path = require('path')
 /**
  * Função para facilitar a inclusão de arquivos em relação ao root
  * isto ajuda na inclusão de arquivos
@@ -13,7 +15,7 @@ module.exports = function(root){
     return function(dir){
 
         // Se nulo retorne root
-        if(!dir) return root;
+        if(!dir) return path.normalize(root);
         
         // Pastas Principais
         var routes = {
@@ -35,7 +37,7 @@ module.exports = function(root){
 
         for (name in routes){
             if(dir === name){
-                return root+routes[dir];
+                return path.normalize(root+routes[dir]);
             }
         }
         

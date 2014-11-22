@@ -1,3 +1,13 @@
+## Variáveis Globais ##
+
+``` ROOT ```
+
+Caminho da pasta inicial do sistema
+
+``` PATHS ```
+
+Função para facilitar a inclusão das principais pastas do sistema 
+
 ## Pastas ##
 
 ``` ./app/ ```
@@ -36,3 +46,8 @@ Aqui ficam as imagens Scripts e folhas de estilo já renderizadas pelo sistema.
 ``` ./lib/ ```
 
 Funções avulsas não relacionadas a nenhumas das outras pastas
+
+
+## Referências ##
+* Handlebars https://github.com/donpark/hbs
+* Mongoose express exemplo https://github.com/madhums/node-express-mongoose-demo

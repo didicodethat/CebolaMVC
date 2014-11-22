@@ -7,9 +7,10 @@ global.PATHS = require('./config/require_routes')(ROOT)
 
 //
 var config = require(PATHS('CONFIG')+'/config')
+var routes = require(PATHS('CONFIG')+'/routes')(app)
 
 //
-var server = app.listen(3000,function(){
+var server = app.listen(config.port || 3000,function(){
     console.log('Servidor Iniciado')
 }); 
 

@@ -1,9 +1,11 @@
 var vows = require('vows'),
-    assert = require('assert')
+    assert = require('assert'),
+    path = require('path')
 
 
+var root_path = path.normalize(__dirname+'/../')
 
-var root_path = __dirname+'/../';
+// Testes
 
 vows.describe('Require Routes').addBatch({
     'Quando propriedade for ' : {
@@ -13,11 +15,11 @@ vows.describe('Require Routes').addBatch({
         'vazia ou nula' : {
             
             topic : function(require_routes){
-                return require_routes();
+                return require_routes()
             },
 
             'Deve retornar o root' : function(topic){
-                assert.deepEqual(topic,root_path);
+                assert.deepEqual(topic,root_path)
             }
 
         },
@@ -25,15 +27,15 @@ vows.describe('Require Routes').addBatch({
         'valor definido' : {
             
             topic : function(require_routes){;
-                return require_routes('CONFIG');
+                return require_routes('CONFIG')
             },
             
             'Deve valor diferente da ROOT' : function(route){
-                assert.notDeepEqual(route,root_path);
+                assert.notDeepEqual(route,root_path)
             },
 
             'deve ser uma string' : function(route){
-                assert.isString(route);
+                assert.isString(route)
             }
 
         },
@@ -41,11 +43,11 @@ vows.describe('Require Routes').addBatch({
         'Valor não definido' : {
             
             topic : function(require_routes){
-                return require_routes('asd');
+                return require_routes('asd')
             },
             
             'Deve ser falsa' : function(route){
-                assert.isFalse(route);
+                assert.isFalse(route)
             }
         }
     }

@@ -35,13 +35,6 @@ module.exports = function(root){
             FRONT_END : '/front_end'
         }
 
-        for (name in routes){
-            if(dir === name){
-                return path.normalize(root+routes[dir]);
-            }
-        }
-        
-        // Se nenhum valor for achado retorne false
-        return false;
+        return routes[dir]? root+routes[dir] : false;
     };
 } 

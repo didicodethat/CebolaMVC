@@ -36,6 +36,10 @@ vows.describe('Require Routes').addBatch({
 
             'deve ser uma string' : function(route){
                 assert.isString(route)
+            },
+
+            'deve iniciar com o root' : function(route){
+                assert.isTrue( (route.indexOf(root_path) === 0) );
             }
 
         },
@@ -43,7 +47,7 @@ vows.describe('Require Routes').addBatch({
         'Valor não definido' : {
             
             topic : function(require_routes){
-                return require_routes('asd')
+                return require_routes('asd'+Math.random())
             },
             
             'Deve ser falsa' : function(route){

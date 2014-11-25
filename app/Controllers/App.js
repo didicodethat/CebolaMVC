@@ -1,3 +1,3 @@
 exports.main = function(req,res,next){
-    res.send('Em Breve')
+    res.render('App/index')
 }

@@ -51,3 +51,4 @@ Funções avulsas não relacionadas a nenhumas das outras pastas
 ## Referências ##
 * Handlebars https://github.com/donpark/hbs
 * Mongoose express exemplo https://github.com/madhums/node-express-mongoose-demo
+* Less Middleware https://github.com/emberfeather/less.js-middleware
